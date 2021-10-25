@@ -1,7 +1,7 @@
 <div class="container">
   <?php if ($this->session->flashdata('flash')):?>
     <div class="alert alert-succses alert-dismissible fade show" role="alert">
-      <strong>Data barang </strong> <?= $this->session->flashdata('flash'); ?>
+      <strong>Data barang  </strong> <?= $this->session->flashdata('flash'); ?>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
@@ -32,6 +32,8 @@
       <td><?= $brg['nama_barang']; ?></td>
       <td><?= $brg['harga']; ?></td>
       <td><?= $brg['stok']; ?></td>
+      <td><a href="<?= base_url(); ?> barang/detail/ <?= $brg['id_barang'];?>" class="btn btn-danger">Detiail</a>
+      <td><a href="<?= base_url(); ?> barang/ubah/ <?= $brg['id_barang'];?>" class="btn btn-danger" >Ubah</a>
       <td><a href="<?= base_url(); ?> barang/hapus/ <?= $brg['id_barang'];?>" class="btn btn-danger" onclick="return confirm('Apakah kamu yakin?')">Hapus</a></td>
     </tr>
     <?php endforeach ?>
