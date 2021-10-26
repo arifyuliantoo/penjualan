@@ -21,11 +21,11 @@ class Barang extends CI_Controller
     }
     public function tambah()
     {
-        $data['judul']="Tambah Data Barang";
-        $this->form_validation->set_rules('id_barang', 'Kode barang', 'required');
-        $this->form_validation->set_rules('nama_barang', 'Nama Barang', 'required');
-        $this->form_validation->set_rules('harga', 'Harga', 'required|numeric');
-        $this->form_validation->set_rules('stok', 'Stok', 'required|numeric');
+    $data['judul']="Tambah Data Barang";
+    $this->form_validation->set_rules('id_barang', 'Kode barang', 'required');
+    $this->form_validation->set_rules('nama_barang', 'Nama Barang', 'required');
+    $this->form_validation->set_rules('harga', 'Harga', 'required|numeric');
+    $this->form_validation->set_rules('stok', 'Stok', 'required|numeric');
         if ($this->form_validation->run() == FALSE)
                 {
                     $this->load->view('template/header',$data);
@@ -36,33 +36,33 @@ class Barang extends CI_Controller
                 {
                     $this->Barang_model->TambahDataBarang();
                     $this->session->set_flashdata('flash','Berhasil di tambahkan');
-                    redirect('barang');
+                    redirect('Barang');
                 }
           
     }
     public function hapus($id){
         $this->Barang_model->hapusDataBarang($id);$this->session->set_flashdata('flash,"Dihapus');
-        redirect ('barang');
+        redirect ('Barang');
     }
     public function detail($id){
         $data['judul']="Detail Barang";
-        $data['barang']=$this->Barang_model->getBarangById($id);
+        $data['Barang']=$this->Barang_model->getBarangById($id);
         $this->load->view('templates/header',$data);
         $this->load->view('barang/detail',$data);
         $this->load->view('templates/footer');
     }
     public function ubah($id){
         $data['judul']="Ubah Data Barang";
-        $data['barang']=$this->Barang_model->getBarangById($id);
+        $data['Barang']=$this->Barang_model->getBarangById($id);
 
         $this->form_validation-
-    >set_rules('id_barang', 'Kode Barang', 'required');
+    set_rules('id_barang', 'Kode Barang', 'required');
         $this->form_validation-
-    >set_rules('nama_barang', 'Nama Barang', 'required');
+    set_rules('nama_barang', 'Nama Barang', 'required');
         $this->form_validation-
-    >set_rules('harga', 'Harga', 'required|numeric');
+    set_rules('harga', 'Harga', 'required|numeric');
         $this->form_validation-
-    >set_rules('stok', 'Stok', 'required|numeric');
+    set_rules('stok', 'Stok', 'required|numeric');
 
         if ($this->form_validation->run() == FALSE)
             {

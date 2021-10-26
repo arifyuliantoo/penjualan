@@ -7,7 +7,7 @@
                     <h5 class="card-title"><?= $barang['nama_barang']; ?></h5>
                     <p class="card-text"><?= $barang['harga']; ?></p>
                     <p class="card-text"><?= $barang['stok']; ?></p>
-                    <a href="<?= base_url(); ?>barang" class="btn btnprimary">Kembali</a>
+                    <a href="<?= base_url(); ?>Barang" class="btn btnprimary">Kembali</a>
                 </div>
             </div>
         </div>

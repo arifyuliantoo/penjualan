@@ -10,7 +10,7 @@
 
   <div class="row-mt-3">
     <div class="col-md-6">
-      <a href="<?= base_url(); ?> barang/tambah" class="btn btn-primary">Tambah Data Barang</a>
+      <a href="<?= base_url(); ?>Barang/tambah" class="btn btn-primary">Tambah Data Barang</a>
     </div>
   </div>
 
@@ -32,9 +32,9 @@
       <td><?= $brg['nama_barang']; ?></td>
       <td><?= $brg['harga']; ?></td>
       <td><?= $brg['stok']; ?></td>
-      <td><a href="<?= base_url(); ?> barang/detail/ <?= $brg['id_barang'];?>" class="btn btn-danger">Detiail</a>
-      <td><a href="<?= base_url(); ?> barang/ubah/ <?= $brg['id_barang'];?>" class="btn btn-danger" >Ubah</a>
-      <td><a href="<?= base_url(); ?> barang/hapus/ <?= $brg['id_barang'];?>" class="btn btn-danger" onclick="return confirm('Apakah kamu yakin?')">Hapus</a></td>
+      <td><a href="<?= base_url();?>Barang/detail/ <?= $brg['id_barang'];?>" class="btn btn-danger">Detiail</a>
+      <td><a href="<?= base_url();?>Barang/ubah/ <?= $brg['id_barang'];?>" class="btn btn-sucsess" >Ubah</a>
+      <td><a href="<?= base_url();?>Barang/hapus/ <?= $brg['id_barang'];?>" class="btn btn-danger" onclick="return confirm('Apakah kamu yakin?')">Hapus</a></td>
     </tr>
     <?php endforeach ?>
     

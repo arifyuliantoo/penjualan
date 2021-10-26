@@ -21,10 +21,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+          <a class="nav-link active" aria-current="page" href="<?=base_url();?>">Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Barang</a>
+          <a class="nav-link" href="<?=base_url();?>Barang/index">Barang</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">kontak</a>
